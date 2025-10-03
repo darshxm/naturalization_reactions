@@ -18,6 +18,9 @@ def get_reactions():
         # Read CSV file
         df = pd.read_csv(CSV_PATH)
         
+        # Replace NaN values with None (which becomes null in JSON)
+        df = df.where(pd.notna(df), None)
+        
         # Convert to list of dictionaries
         reactions = df.to_dict('records')
         

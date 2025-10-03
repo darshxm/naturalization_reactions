@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Papa from 'papaparse';
 import StatsCard from './components/StatsCard';
 import StanceBarChart from './components/StanceBarChart';
 import TimelineChart from './components/TimelineChart';
@@ -22,30 +21,21 @@ function App() {
 
   const fetchData = async () => {
     try {
-      console.log('Fetching CSV data...');
+      console.log('Fetching data from API...');
       
-      // Fetch the CSV file from the public folder
-      const response = await fetch('/natur_reacties.csv');
-      const csvText = await response.text();
+      // Fetch data from Flask API (Vite proxy will forward to localhost:5000)
+      const response = await fetch('/api/reactions');
       
-      console.log('CSV fetched, parsing...');
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status} ${response.statusText}`);
+      }
       
-      // Parse CSV using PapaParse
-      Papa.parse(csvText, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => {
-          console.log('Data parsed:', results.data.length, 'records');
-          setData(results.data);
-          calculateStats(results.data);
-          setLoading(false);
-        },
-        error: (error) => {
-          console.error('Parse error:', error);
-          setError(error.message);
-          setLoading(false);
-        }
-      });
+      const jsonData = await response.json();
+      console.log('Data received from API:', jsonData.length, 'records');
+      
+      setData(jsonData);
+      calculateStats(jsonData);
+      setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
       setError(error.message);
