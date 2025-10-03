@@ -19,23 +19,40 @@ function App() {
     fetchData();
   }, []);
 
+  import Papa from 'papaparse';
+
+// ... (keep existing imports)
+
   const fetchData = async () => {
     try {
-      console.log('Fetching data from API...');
+      console.log('Fetching data from CSV...');
       
-      // Fetch data from Flask API (Vite proxy will forward to localhost:5000)
-      const response = await fetch('/api/reactions');
+      // Fetch data from public CSV
+      const response = await fetch('/natur_reacties.csv');
       
       if (!response.ok) {
-        throw new Error(`API error: ${response.status} ${response.statusText}`);
+        throw new Error(`CSV error: ${response.status} ${response.statusText}`);
       }
       
-      const jsonData = await response.json();
-      console.log('Data received from API:', jsonData.length, 'records');
+      const csvText = await response.text();
       
-      setData(jsonData);
-      calculateStats(jsonData);
-      setLoading(false);
+      // Parse CSV
+      Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          console.log('Parsed CSV data:', results.data.length, 'records');
+          setData(results.data);
+          calculateStats(results.data);
+          setLoading(false);
+        },
+        error: (error) => {
+          console.error('Error parsing CSV:', error);
+          setError(error.message);
+          setLoading(false);
+        }
+      });
+
     } catch (error) {
       console.error('Error fetching data:', error);
       setError(error.message);
