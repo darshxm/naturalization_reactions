@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Path to CSV file
-CSV_PATH = os.path.join(os.path.dirname(__file__), 'natur_reacties.csv')
+CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'natur_reacties.csv')
 
 @app.route('/api/reactions', methods=['GET'])
 def get_reactions():
