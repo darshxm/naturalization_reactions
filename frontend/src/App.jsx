@@ -1,3 +1,4 @@
+import Papa from 'papaparse';
 import React, { useState, useEffect } from 'react';
 import StatsCard from './components/StatsCard';
 import StanceBarChart from './components/StanceBarChart';
@@ -19,7 +20,7 @@ function App() {
     fetchData();
   }, []);
 
-  import Papa from 'papaparse';
+
 
 // ... (keep existing imports)
 
