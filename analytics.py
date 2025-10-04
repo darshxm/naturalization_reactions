@@ -24,6 +24,7 @@ BATCH_SIZE   = 20
 MODEL_NAME   = "gemini-2.5-flash"
 SAVE_INTERVAL = 5  # Save progress every N batches
 SLEEP_TIME = 1  # Sleep time in seconds between API calls
+START_FRESH = True  # Set to True to start from beginning, False to resume from where you left off
 
 # Define what “For/Against” means for your task.
 POLICY_STATEMENT = (
@@ -37,9 +38,21 @@ class Stance(enum.Enum):
     FOR = "For"
     AGAINST = "Against"
 
+class Language(enum.Enum):
+    DUTCH = "Dutch"
+    ENGLISH = "English"
+    OTHER = "Other"
+
+class ImmigrantStatus(enum.Enum):
+    YES = "Yes"
+    NO = "No"
+    UNCLEAR = "Unclear"
+
 class OpinionLabel(BaseModel):
     row_index: int
     label: Stance
+    language: Language
+    identifies_as_immigrant: ImmigrantStatus
 
 # ----------------------------
 # Gemini client
@@ -65,11 +78,19 @@ def build_prompt(items: List[Dict]) -> str:
         f"Task: For each item, read the 'text' and classify the author's stance toward {POLICY_STATEMENT}.\n"
         "Return a JSON array of objects with fields:\n"
         "- row_index: the same integer we provide\n"
-        "- label: one of \"For\" or \"Against\" only\n\n"
-        "Decision rule:\n"
+        "- label: one of \"For\" or \"Against\" only\n"
+        "- language: one of \"Dutch\", \"English\", or \"Other\" (detect the language of the text)\n"
+        "- identifies_as_immigrant: one of \"Yes\", \"No\", or \"Unclear\" (does the author identify themselves as an immigrant/migrant?)\n\n"
+        "Decision rules:\n"
         "- \"For\"  = the author supports the proposal.\n"
         "- \"Against\" = the author opposes the proposal.\n"
         "If the stance is mixed or ambiguous, pick the more likely one—do not return any other labels.\n\n"
+        "- \"Dutch\" = text is primarily in Dutch\n"
+        "- \"English\" = text is primarily in English\n"
+        "- \"Other\" = text is in another language or mixed\n\n"
+        "- \"Yes\" = the author explicitly identifies as an immigrant/migrant or strongly implies they are\n"
+        "- \"No\" = the author clearly indicates they are not an immigrant/migrant\n"
+        "- \"Unclear\" = there is no clear indication either way\n\n"
         "Items to classify (JSON):\n"
         f"{json.dumps(items, ensure_ascii=False)}"
     )
@@ -114,21 +135,37 @@ def save_stance_column(df: pd.DataFrame):
 
 def main():
     df = pd.read_csv(CSV_PATH_IN)
-    if "stance" not in df.columns:
+    
+    # Initialize or reset columns based on START_FRESH setting
+    if START_FRESH:
+        print("Starting fresh - clearing all previous classifications...")
         df["stance"] = pd.NA
+        df["language"] = pd.NA
+        df["identifies_as_immigrant"] = pd.NA
+        start_from = 0
+    else:
+        # Create columns if they don't exist
+        if "stance" not in df.columns:
+            df["stance"] = pd.NA
+        if "language" not in df.columns:
+            df["language"] = pd.NA
+        if "identifies_as_immigrant" not in df.columns:
+            df["identifies_as_immigrant"] = pd.NA
+        
+        # Find where to resume from (first row without a stance)
+        start_from = 0
+        if df["stance"].notna().any():
+            # Find the first NA value after any filled values
+            filled_count = df["stance"].notna().sum()
+            start_from = filled_count
+            print(f"Resuming from row {start_from} ({filled_count} already processed)")
+        else:
+            print("No previous progress found - starting from beginning...")
 
     n = len(df)
     if n == 0:
         print("No rows found in CSV.")
         return
-
-    # Find where to resume from (first row without a stance)
-    start_from = 0
-    if df["stance"].notna().any():
-        # Find the first NA value after any filled values
-        filled_count = df["stance"].notna().sum()
-        start_from = filled_count
-        print(f"Resuming from row {start_from} ({filled_count} already processed)")
     
     print(f"Classifying {n} opinions in batches of {BATCH_SIZE}...")
 
@@ -144,6 +181,8 @@ def main():
         # Write results back into dataframe
         for r in results:
             df.at[r.row_index, "stance"] = r.label.value
+            df.at[r.row_index, "language"] = r.language.value
+            df.at[r.row_index, "identifies_as_immigrant"] = r.identifies_as_immigrant.value
 
         print(f"Processed rows {start}–{end-1} ({end}/{n}).")
         

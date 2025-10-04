@@ -1,6 +1,9 @@
 import Papa from 'papaparse';
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import StatsCard from './components/StatsCard';
+import LanguageStatsCard from './components/LanguageStatsCard';
+import LanguageStanceCard from './components/LanguageStanceCard';
 import StanceBarChart from './components/StanceBarChart';
 import TimelineChart from './components/TimelineChart';
 import NetherlandsMap from './components/NetherlandsMap';
@@ -127,8 +130,8 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🇳🇱 Naturalization Reactions Dashboard</h1>
-        <p>Real-time analysis of public opinions on naturalization term extension</p>
+        <h1>Naturalization Reactions Dashboard - Netherlands</h1>
+        <p>Analysis of public opinions on naturalization term extension</p>
       </header>
 
       <div className="stats-grid">
@@ -154,6 +157,11 @@ function App() {
         />
       </div>
 
+      <div className="stats-grid" style={{ marginTop: '30px' }}>
+        <LanguageStatsCard data={data} />
+        <LanguageStanceCard data={data} />
+      </div>
+
       <div className="charts-grid">
         <div className="chart-container">
           <h2>📊 Stance Distribution</h2>
@@ -170,6 +178,8 @@ function App() {
         <h2>🗺️ Geographic Distribution</h2>
         <NetherlandsMap data={data} />
       </div>
+      
+      <Analytics />
     </div>
   );
 }
