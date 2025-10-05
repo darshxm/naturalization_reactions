@@ -24,7 +24,7 @@ BATCH_SIZE   = 20
 MODEL_NAME   = "gemini-2.5-flash"
 SAVE_INTERVAL = 5  # Save progress every N batches
 SLEEP_TIME = 1  # Sleep time in seconds between API calls
-START_FRESH = True  # Set to True to start from beginning, False to resume from where you left off
+START_FRESH = False  # Set to True to start from beginning, False to resume from where you left off
 
 # Define what “For/Against” means for your task.
 POLICY_STATEMENT = (

@@ -131,7 +131,12 @@ function App() {
     <div className="app">
       <header className="header">
         <h1>Naturalization Reactions Dashboard - Netherlands</h1>
-        <p>Analysis of public opinions on naturalization term extension</p>
+        <p>
+          Analysis of public opinions on naturalization term extension as seen here: 
+          <a href="https://internetconsultatie.nl/naturalisatietermijn/b1" target="_blank" rel="noopener noreferrer">
+            Internet Consultatie
+          </a>
+        </p>
       </header>
 
       <div className="stats-grid">
