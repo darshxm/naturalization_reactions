@@ -99,13 +99,27 @@ def classify_batch(df_batch: pd.DataFrame) -> List[OpinionLabel]:
     # Prepare minimal inputs to keep token usage efficient
     items = []
     for row_idx, row in df_batch.iterrows():
-        text = str(row.get(TEXT_COLUMN, "") or "").strip()
-        # Fallback: if text empty, build from other columns (rare)
+        # Collect text from both qna_text and qna columns
+        text_parts = []
+        
+        # Get qna_text if available
+        qna_text = str(row.get("qna_text", "") or "").strip()
+        if qna_text:
+            text_parts.append(qna_text)
+        
+        # Get qna if available (might be JSON string)
+        qna = str(row.get("qna", "") or "").strip()
+        if qna and qna != qna_text:  # Avoid duplication
+            text_parts.append(qna)
+        
+        # Combine both columns
+        text = " ".join(text_parts).strip()
+        
+        # Fallback: if text still empty, build from other columns (rare)
         if not text:
             parts = [
                 str(row.get("detail_naam", "")),
                 str(row.get("detail_plaats", "")),
-                str(row.get("qna_text", "")),
             ]
             text = " ".join([p for p in parts if p]).strip()
 

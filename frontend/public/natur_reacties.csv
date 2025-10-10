@@ -1213,7 +1213,7 @@ Amsterdam,02 oktober 2025 (22:07),Amsterdam,2 oktober 2025,Against,Dutch,Unclear
 Amsterdam,02 oktober 2025 (22:06),Amsterdam,2 oktober 2025,Against,Dutch,Unclear
 Rotterdam ,02 oktober 2025 (22:02),Rotterdam,2 oktober 2025,Against,Dutch,Unclear
 Amsterdam,02 oktober 2025 (22:01),Amsterdam,2 oktober 2025,Against,Dutch,Yes
-Breda,02 oktober 2025 (21:58),Breda,2 oktober 2025,Against,Other,Unclear
+Breda,02 oktober 2025 (21:58),Breda,2 oktober 2025,Against,Dutch,Unclear
 Almere,02 oktober 2025 (21:55),Almere,2 oktober 2025,Against,Dutch,Yes
 Den haag,02 oktober 2025 (21:55),Den haag,2 oktober 2025,Against,Dutch,Yes
 Amsterdam,02 oktober 2025 (21:52),Amsterdam,2 oktober 2025,Against,English,Unclear
@@ -1706,26 +1706,26 @@ Rotterdam,05 oktober 2025 (13:19),Rotterdam,5 oktober 2025,Against,Other,Unclear
 Amsterdam ,05 oktober 2025 (12:57),Amsterdam,5 oktober 2025,Against,Other,Unclear
 Amsterdam,05 oktober 2025 (12:49),Amsterdam,5 oktober 2025,Against,Other,Unclear
 Amsterdam,05 oktober 2025 (12:49),Amsterdam,5 oktober 2025,Against,Other,Unclear
-Eindhoven ,05 oktober 2025 (12:49),Eindhoven,5 oktober 2025,Against,Other,Unclear
-Alkmaar,05 oktober 2025 (12:45),Alkmaar,5 oktober 2025,Against,Other,Unclear
-Delft,05 oktober 2025 (12:26),Delft,5 oktober 2025,Against,Other,Unclear
-Hoofddorp,05 oktober 2025 (12:25),Hoofddorp,5 oktober 2025,Against,Other,Unclear
-Den Bosch ,05 oktober 2025 (12:25),Den Bosch,5 oktober 2025,Against,Other,Unclear
-Netherlands,05 oktober 2025 (12:21),Netherlands,5 oktober 2025,Against,Other,Unclear
-Hoofddorp ,05 oktober 2025 (12:19),Hoofddorp,5 oktober 2025,Against,Other,Unclear
-The Hague ,05 oktober 2025 (12:19),The Hague,5 oktober 2025,Against,Other,Unclear
-Netherlands,05 oktober 2025 (12:14),Netherlands,5 oktober 2025,Against,Other,Unclear
-Overloon ,05 oktober 2025 (12:03),Overloon,5 oktober 2025,Against,Other,Unclear
-Veldhoven,05 oktober 2025 (11:48),Veldhoven,5 oktober 2025,Against,Other,Unclear
-Breda,05 oktober 2025 (11:45),Breda,5 oktober 2025,Against,Other,Unclear
-Voorburg,05 oktober 2025 (11:43),Voorburg,5 oktober 2025,Against,Other,Unclear
-Utrecht,05 oktober 2025 (11:38),Utrecht,5 oktober 2025,Against,Other,Unclear
-Amsterdam,05 oktober 2025 (11:36),Amsterdam,5 oktober 2025,Against,Other,Unclear
-Amsterdam,05 oktober 2025 (11:35),Amsterdam,5 oktober 2025,Against,Other,Unclear
-Utrecht,05 oktober 2025 (11:30),Utrecht,5 oktober 2025,Against,Other,Unclear
-Utrecht,05 oktober 2025 (11:29),Utrecht,5 oktober 2025,Against,Other,Unclear
-Oegstgeest,05 oktober 2025 (11:28),Oegstgeest,5 oktober 2025,Against,Other,Unclear
-Utrecht,05 oktober 2025 (11:26),Utrecht,5 oktober 2025,Against,Other,Unclear
+Eindhoven ,05 oktober 2025 (12:49),Eindhoven,5 oktober 2025,Against,English,Unclear
+Alkmaar,05 oktober 2025 (12:45),Alkmaar,5 oktober 2025,Against,English,Unclear
+Delft,05 oktober 2025 (12:26),Delft,5 oktober 2025,Against,English,Unclear
+Hoofddorp,05 oktober 2025 (12:25),Hoofddorp,5 oktober 2025,Against,English,Unclear
+Den Bosch ,05 oktober 2025 (12:25),Den Bosch,5 oktober 2025,Against,English,Unclear
+Netherlands,05 oktober 2025 (12:21),Netherlands,5 oktober 2025,Against,English,Unclear
+Hoofddorp ,05 oktober 2025 (12:19),Hoofddorp,5 oktober 2025,Against,English,Unclear
+The Hague ,05 oktober 2025 (12:19),The Hague,5 oktober 2025,Against,English,Unclear
+Netherlands,05 oktober 2025 (12:14),Netherlands,5 oktober 2025,Against,English,Unclear
+Overloon ,05 oktober 2025 (12:03),Overloon,5 oktober 2025,Against,English,Unclear
+Veldhoven,05 oktober 2025 (11:48),Veldhoven,5 oktober 2025,Against,English,Unclear
+Breda,05 oktober 2025 (11:45),Breda,5 oktober 2025,Against,English,Unclear
+Voorburg,05 oktober 2025 (11:43),Voorburg,5 oktober 2025,Against,English,Unclear
+Utrecht,05 oktober 2025 (11:38),Utrecht,5 oktober 2025,Against,English,Unclear
+Amsterdam,05 oktober 2025 (11:36),Amsterdam,5 oktober 2025,Against,English,Unclear
+Amsterdam,05 oktober 2025 (11:35),Amsterdam,5 oktober 2025,Against,English,Unclear
+Utrecht,05 oktober 2025 (11:30),Utrecht,5 oktober 2025,Against,English,Unclear
+Utrecht,05 oktober 2025 (11:29),Utrecht,5 oktober 2025,Against,English,Unclear
+Oegstgeest,05 oktober 2025 (11:28),Oegstgeest,5 oktober 2025,Against,English,Unclear
+Utrecht,05 oktober 2025 (11:26),Utrecht,5 oktober 2025,Against,English,Unclear
 Amstelveen,05 oktober 2025 (11:24),Amstelveen,5 oktober 2025,Against,Other,Unclear
 Breda,05 oktober 2025 (11:15),Breda,5 oktober 2025,Against,Other,Unclear
 Enschede,05 oktober 2025 (11:13),Enschede,5 oktober 2025,Against,Other,Unclear
@@ -2336,3 +2336,97 @@ Purmerend,01 oktober 2025 (23:47),Purmerend,1 oktober 2025,Against,Other,Unclear
 Capelle ,01 oktober 2025 (12:11),Capelle,1 oktober 2025,Against,Other,Unclear
 Rotterdam,30 september 2025 (22:29),Rotterdam,30 september 2025,Against,Other,Unclear
 Amsterdam,30 september 2025 (14:43),Amsterdam,30 september 2025,Against,Other,Unclear
+Aalsmeer,10 oktober 2025 (10:48),Aalsmeer,10 oktober 2025,Against,Other,Unclear
+Etten-Leur,10 oktober 2025 (10:15),Etten-Leur,10 oktober 2025,Against,Other,Unclear
+"Haarlem, """,10 oktober 2025 (10:07),"Haarlem, """,10 oktober 2025,Against,Other,Unclear
+Lelystad ,10 oktober 2025 (08:07),Lelystad,10 oktober 2025,For,Other,Unclear
+Julianadorp ,10 oktober 2025 (00:51),Julianadorp,10 oktober 2025,Against,Other,Unclear
+Breda,09 oktober 2025 (23:27),Breda,9 oktober 2025,For,Other,Unclear
+Sittard,09 oktober 2025 (22:48),Sittard,9 oktober 2025,For,Other,Unclear
+"Maastricht, """,09 oktober 2025 (22:21),"Maastricht, """,9 oktober 2025,For,Other,Unclear
+Utrecht,09 oktober 2025 (22:17),Utrecht,9 oktober 2025,For,Other,Unclear
+Utrecht,09 oktober 2025 (22:08),Utrecht,9 oktober 2025,For,Other,Unclear
+Nieuwegein,09 oktober 2025 (21:54),Nieuwegein,9 oktober 2025,For,Other,Unclear
+Rotterdam,09 oktober 2025 (21:52),Rotterdam,9 oktober 2025,Against,Other,Unclear
+Arnhem,09 oktober 2025 (21:49),Arnhem,9 oktober 2025,For,Other,Unclear
+Amsterdam,09 oktober 2025 (21:42),Amsterdam,9 oktober 2025,For,Other,Unclear
+Amsterdam,09 oktober 2025 (21:37),Amsterdam,9 oktober 2025,For,Other,Unclear
+Einhoven,09 oktober 2025 (21:36),Einhoven,9 oktober 2025,For,Other,Unclear
+Maastricht,09 oktober 2025 (21:32),Maastricht,9 oktober 2025,For,Other,Unclear
+Rotterdam,09 oktober 2025 (21:22),Rotterdam,9 oktober 2025,For,Other,Unclear
+Nijmegen,09 oktober 2025 (21:20),Nijmegen,9 oktober 2025,For,Other,Unclear
+Arnhem,09 oktober 2025 (21:20),Arnhem,9 oktober 2025,For,Other,Unclear
+Amsterdam,09 oktober 2025 (21:04),Amsterdam,9 oktober 2025,For,Other,Unclear
+Utrecht,09 oktober 2025 (20:48),Utrecht,9 oktober 2025,For,Other,Unclear
+Amstelveen,09 oktober 2025 (20:35),Amstelveen,9 oktober 2025,For,Other,Unclear
+Haarlem,09 oktober 2025 (19:35),Haarlem,9 oktober 2025,Against,Other,Unclear
+Leusden,09 oktober 2025 (19:08),Leusden,9 oktober 2025,Against,Other,Unclear
+Nijkerk,09 oktober 2025 (18:45),Nijkerk,9 oktober 2025,Against,Other,Unclear
+Oss,09 oktober 2025 (18:25),Oss,9 oktober 2025,Against,Other,Unclear
+Hoorn,09 oktober 2025 (18:14),Hoorn,9 oktober 2025,Against,Other,Unclear
+Leusden,09 oktober 2025 (18:11),Leusden,9 oktober 2025,Against,Other,Unclear
+Netherlands,09 oktober 2025 (18:03),Netherlands,9 oktober 2025,Against,Other,Unclear
+Amstelveen.,09 oktober 2025 (17:57),Amstelveen.,9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (17:43),Amsterdam,9 oktober 2025,Against,Other,Unclear
+Burlington,09 oktober 2025 (17:41),Burlington,9 oktober 2025,Against,Other,Unclear
+Weesp,09 oktober 2025 (17:38),Weesp,9 oktober 2025,Against,Other,Unclear
+Breukelen ,09 oktober 2025 (17:38),Breukelen,9 oktober 2025,Against,Other,Unclear
+Hoorn,09 oktober 2025 (17:38),Hoorn,9 oktober 2025,Against,Other,Unclear
+Lelystad,09 oktober 2025 (17:14),Lelystad,9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (16:55),Amsterdam,9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (16:54),Amsterdam,9 oktober 2025,Against,Other,Unclear
+Eindhoven,09 oktober 2025 (16:38),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Uithoorn,09 oktober 2025 (16:36),Uithoorn,9 oktober 2025,Against,Other,Unclear
+Almere,09 oktober 2025 (16:18),Almere,9 oktober 2025,Against,Other,Unclear
+Heemstede ,09 oktober 2025 (15:46),Heemstede,9 oktober 2025,Against,Other,Unclear
+The Hague,09 oktober 2025 (15:40),The Hague,9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (15:34),Amsterdam,9 oktober 2025,Against,Other,Unclear
+"Splijtbakweg 115, 1333 HJ Almere",09 oktober 2025 (15:09),"Splijtbakweg 115, 1333 HJ Almere",9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (15:01),Amsterdam,9 oktober 2025,Against,Other,Unclear
+Eindhoven,09 oktober 2025 (14:41),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Utrecht,09 oktober 2025 (14:03),Utrecht,9 oktober 2025,Against,Other,Unclear
+Demeern ,09 oktober 2025 (13:45),Demeern,9 oktober 2025,Against,Other,Unclear
+Eindhoven ,09 oktober 2025 (13:19),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Amstelveen,09 oktober 2025 (13:08),Amstelveen,9 oktober 2025,Against,Other,Unclear
+"Rozenburg, Zuid-Holland",09 oktober 2025 (13:06),"Rozenburg, Zuid-Holland",9 oktober 2025,Against,Other,Unclear
+Eindhoven,09 oktober 2025 (12:56),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Netherlands,09 oktober 2025 (12:37),Netherlands,9 oktober 2025,Against,Other,Unclear
+Eindhoven,09 oktober 2025 (11:48),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Groningen,09 oktober 2025 (11:44),Groningen,9 oktober 2025,Against,Other,Unclear
+Hilversum,09 oktober 2025 (11:31),Hilversum,9 oktober 2025,Against,Other,Unclear
+HOOFDDORP,09 oktober 2025 (11:22),HOOFDDORP,9 oktober 2025,Against,Other,Unclear
+Eindhoven,09 oktober 2025 (11:12),Eindhoven,9 oktober 2025,Against,Other,Unclear
+Aalsmeer ,09 oktober 2025 (11:08),Aalsmeer,9 oktober 2025,Against,Other,Unclear
+Utrecht ,09 oktober 2025 (11:05),Utrecht,9 oktober 2025,Against,Other,Unclear
+Amsterdam,09 oktober 2025 (10:56),Amsterdam,9 oktober 2025,Against,Other,Unclear
+Amstelveen,09 oktober 2025 (09:53),Amstelveen,9 oktober 2025,For,Other,Unclear
+Amsterdam,09 oktober 2025 (09:52),Amsterdam,9 oktober 2025,For,Other,Unclear
+Haarlem ,09 oktober 2025 (09:51),Haarlem,9 oktober 2025,For,Other,Unclear
+Delft,09 oktober 2025 (09:04),Delft,9 oktober 2025,For,Other,Unclear
+Utrecht,09 oktober 2025 (08:56),Utrecht,9 oktober 2025,For,Other,Unclear
+Nederlands,09 oktober 2025 (08:36),Nederlands,9 oktober 2025,For,Other,Unclear
+Amsterdam,09 oktober 2025 (08:20),Amsterdam,9 oktober 2025,For,Other,Unclear
+Hilversum,09 oktober 2025 (06:27),Hilversum,9 oktober 2025,For,Other,Unclear
+Zutphen,09 oktober 2025 (00:10),Zutphen,9 oktober 2025,For,Other,Unclear
+Eindhoven,09 oktober 2025 (00:09),Eindhoven,9 oktober 2025,For,Other,Unclear
+Maarssen,08 oktober 2025 (23:28),Maarssen,8 oktober 2025,For,Other,Unclear
+Ijmuiden ,08 oktober 2025 (23:13),Ijmuiden,8 oktober 2025,For,Other,Unclear
+Eindhoven ,08 oktober 2025 (23:00),Eindhoven,8 oktober 2025,For,Other,Unclear
+Sittard,08 oktober 2025 (22:40),Sittard,8 oktober 2025,Against,Other,Unclear
+Amstelveen,08 oktober 2025 (22:35),Amstelveen,8 oktober 2025,For,Other,Unclear
+Utrecht,08 oktober 2025 (22:08),Utrecht,8 oktober 2025,For,Other,Unclear
+Vlissingen ,08 oktober 2025 (21:38),Vlissingen,8 oktober 2025,For,Other,Unclear
+Almere,08 oktober 2025 (21:36),Almere,8 oktober 2025,For,Other,Unclear
+Zevenhuizen ,08 oktober 2025 (21:19),Zevenhuizen,8 oktober 2025,For,Other,Unclear
+Maarssen,08 oktober 2025 (21:19),Maarssen,8 oktober 2025,For,Other,Unclear
+Almere,08 oktober 2025 (20:56),Almere,8 oktober 2025,For,Other,Unclear
+Rotterdam,08 oktober 2025 (20:21),Rotterdam,8 oktober 2025,For,Other,Unclear
+Almere,08 oktober 2025 (19:35),Almere,8 oktober 2025,For,Other,Unclear
+Eindhoven ,08 oktober 2025 (18:46),Eindhoven,8 oktober 2025,For,Other,Unclear
+Utrecht,08 oktober 2025 (17:14),Utrecht,8 oktober 2025,For,Other,Unclear
+Rotterdam,08 oktober 2025 (09:08),Rotterdam,8 oktober 2025,For,Other,Unclear
+Purmerend ,07 oktober 2025 (20:56),Purmerend,7 oktober 2025,For,Other,Unclear
+Heemskerk,06 oktober 2025 (14:54),Heemskerk,6 oktober 2025,For,Other,Unclear
+Utrecht ,04 oktober 2025 (14:35),Utrecht,4 oktober 2025,For,Other,Unclear
+Utrecht,30 september 2025 (20:31),Utrecht,30 september 2025,For,Other,Unclear
+Apeldoorn,30 september 2025 (19:25),Apeldoorn,30 september 2025,For,Other,Unclear
