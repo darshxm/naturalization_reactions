@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import Papa from 'papaparse';
-import { rateLimit, createRateLimitHeaders } from '../lib/rateLimit';
+import { rateLimit, createRateLimitHeaders } from './lib/rateLimit';
 
 // Maximum allowed file size (10MB)
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
