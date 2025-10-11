@@ -20,7 +20,7 @@ CSV_PATH_IN  = "natur_reacties.csv"
 BATCH_SIZE   = 20
 MODEL_NAME   = "gemini-2.5-flash"
 SAVE_INTERVAL = 5  # Save progress every N batches
-SLEEP_TIME = 1  # Sleep time in seconds between API calls
+SLEEP_TIME = 4  # Sleep time in seconds between API calls
 
 # ----------------------------
 # Structured output types
@@ -41,7 +41,7 @@ def load_json_api(path: str) -> Dict:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-api_key = load_json_api("api.json")["gemini_key"]
+api_key = load_json_api("api.json")["gemini_key_2"]
 client = genai.Client(api_key=api_key)
 
 def chunk_indices(n_rows: int, batch_size: int):
