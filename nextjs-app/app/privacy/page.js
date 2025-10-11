@@ -217,6 +217,7 @@ export default function PrivacyPolicy() {
           <p style={{ lineHeight: '1.8', color: '#555', marginTop: '10px' }}>
             <strong>Email:</strong> [darshxm@gmail.com]<br />
             <strong>Project:</strong> Naturalization Reactions Dashboard<br />
+            <strong>GitHub:</strong> <a href="https://github.com/darshxm"></a>
           </p>
         </section>
 
