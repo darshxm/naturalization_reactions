@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+.venv
+venv
+*.csv
+*.jsonl
+*.json
+!nextjs-app/package.json
+!nextjs-app/package-lock.json
+!vercel.json
+.git
+.github
