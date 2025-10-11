@@ -58,8 +58,6 @@ export default function PrivacyPolicy() {
             <li><strong>Opinion Classification:</strong> Whether the opinion is "For" or "Against" 
             the proposal (determined by AI analysis)</li>
             <li><strong>Language:</strong> Primary language of the submission (Dutch, English, or Other)</li>
-            <li><strong>Immigrant Status Inference:</strong> Whether the submitter identifies as 
-            an immigrant/migrant (inferred from submission text)</li>
           </ul>
           <p style={{ lineHeight: '1.8', color: '#555', marginTop: '15px' }}>
             <strong>Note:</strong> Names from original submissions are <u>NOT</u> displayed 
@@ -166,7 +164,7 @@ export default function PrivacyPolicy() {
           <h2 style={{ color: '#2c3e50', marginBottom: '15px' }}>11. Data Subject Requests</h2>
           <p style={{ lineHeight: '1.8', color: '#555' }}>
             To exercise your GDPR rights or request information about data processing, 
-            please contact us at: <strong>[INSERT YOUR EMAIL]</strong>
+            please contact us at: <strong>[darshxm@gmail.com]</strong>
           </p>
           <p style={{ lineHeight: '1.8', color: '#555', marginTop: '10px' }}>
             We will respond to requests within 30 days as required by GDPR.
@@ -217,12 +215,8 @@ export default function PrivacyPolicy() {
             For questions about this privacy policy or data processing:
           </p>
           <p style={{ lineHeight: '1.8', color: '#555', marginTop: '10px' }}>
-            <strong>Email:</strong> [INSERT YOUR EMAIL]<br />
+            <strong>Email:</strong> [darshxm@gmail.com]<br />
             <strong>Project:</strong> Naturalization Reactions Dashboard<br />
-            <strong>Source Code:</strong> <a href="https://github.com/darshxm/naturalization_reactions" 
-            target="_blank" rel="noopener noreferrer" style={{ color: '#2196F3' }}>
-              GitHub Repository
-            </a>
           </p>
         </section>
 
