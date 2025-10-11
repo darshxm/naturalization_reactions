@@ -3,6 +3,7 @@ __pycache__
 .venv
 venv
 *.csv
+!nextjs-app/public/*.csv
 *.jsonl
 *.json
 !nextjs-app/package.json
