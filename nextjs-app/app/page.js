@@ -124,6 +124,10 @@ export default function Home() {
           <a href="https://internetconsultatie.nl/naturalisatietermijn/b1" target="_blank" rel="noopener noreferrer">
             Internet Consultatie
           </a>
+          {' | '}
+          <a href="/privacy" style={{ color: '#fff', textDecoration: 'underline' }}>
+            Privacy Policy
+          </a>
         </p>
       </header>
 

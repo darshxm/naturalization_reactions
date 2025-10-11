@@ -21,7 +21,7 @@ TEST_URL = "https://internetconsultatie.nl/naturalisatietermijn/reactie/d4d35088
 
 async def fetch(session: aiohttp.ClientSession, url: str) -> str:
     async with async_timeout.timeout(TIMEOUT):
-        async with session.get(url, ssl=False) as resp:
+        async with session.get(url, ssl=True) as resp:
             print(f"Status: {resp.status}")
             print(f"Headers: {dict(resp.headers)}")
             resp.raise_for_status()
