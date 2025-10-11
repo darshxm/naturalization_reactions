@@ -1,18 +1,8 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/$1"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd nextjs-app && npm install && npm run build",
+  "devCommand": "cd nextjs-app && npm run dev",
+  "installCommand": "cd nextjs-app && npm install",
+  "framework": "nextjs",
+  "outputDirectory": "nextjs-app/.next"
 }

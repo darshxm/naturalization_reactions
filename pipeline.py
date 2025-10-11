@@ -8,6 +8,8 @@ Includes automatic git commit and push of results.
 import subprocess
 import sys
 import time
+import shutil
+from pathlib import Path
 from datetime import datetime
 
 def run_script(script_name: str, description: str) -> bool:
@@ -76,12 +78,37 @@ def run_git_command(command: list, description: str) -> bool:
         return False
 
 
+def copy_csv_to_nextjs() -> bool:
+    """
+    Copy the generated CSV to the Next.js public folder.
+    """
+    print(f"\n{'='*60}")
+    print("Step 4: Copy CSV to Next.js App")
+    print(f"{'='*60}\n")
+    
+    source = Path("natur_reacties.csv")
+    dest = Path("nextjs-app/public/natur_reacties.csv")
+    
+    try:
+        # Ensure the destination directory exists
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Copy the file
+        shutil.copy2(source, dest)
+        print(f"✓ Copied {source} to {dest}")
+        return True
+        
+    except Exception as e:
+        print(f"✗ Failed to copy CSV: {type(e).__name__}: {e}")
+        return False
+
+
 def git_commit_and_push() -> bool:
     """
     Add, commit, and push changes to git.
     """
     print(f"\n{'='*60}")
-    print("Step 4: Git Commit and Push")
+    print("Step 5: Git Commit and Push")
     print(f"{'='*60}\n")
     
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -172,6 +199,12 @@ def main():
         for step in completed_steps:
             print(f"  ✓ {step}")
         
+        # Copy CSV to Next.js
+        csv_success = copy_csv_to_nextjs()
+        
+        if csv_success:
+            completed_steps.append("Copy CSV to Next.js App")
+        
         # Run git operations
         git_success = git_commit_and_push()
         
@@ -186,17 +219,21 @@ def main():
         
         if git_success:
             print(f"\n✓ Complete pipeline finished successfully!")
-            print(f"\nAll steps completed ({len(completed_steps)}/{len(steps) + 1}):")
+            print(f"\nAll steps completed ({len(completed_steps)}/{len(steps) + 2}):")
             for step in completed_steps:
                 print(f"  ✓ {step}")
             print(f"\nTotal time: {total_time:.2f} seconds")
-            print("\nOutput file ready: frontend/public/natur_reacties.csv")
+            print("\nOutput files ready:")
+            print("  - natur_reacties.csv")
+            print("  - nextjs-app/public/natur_reacties.csv")
             print("Changes committed and pushed to git repository")
             sys.exit(0)
         else:
             print(f"\n⚠ Data processing succeeded but git operations failed")
             print(f"\nTotal time: {total_time:.2f} seconds")
-            print("\nOutput file ready: frontend/public/natur_reacties.csv")
+            print("\nOutput files ready:")
+            print("  - natur_reacties.csv")
+            print("  - nextjs-app/public/natur_reacties.csv")
             print("Please commit and push changes manually")
             sys.exit(1)
 
