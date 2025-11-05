@@ -261,7 +261,7 @@ async def main_async():
     failed = len(results) - successful
     print(f"Final results: {successful} successful, {failed} failed", file=sys.stderr)
 
-    # Write CSV (append mode for incremental updates)
+    # Write CSV (merge with existing data properly to avoid column misalignment)
     csv_path = "data/natur_reacties_full.csv"
     fieldnames = [
         "list_name", "list_place", "list_date_time",
@@ -270,15 +270,36 @@ async def main_async():
         "qna_count", "qna_text", "raw_html_length"
     ]
     
-    # Check if CSV exists to determine if we need to write headers
+    # Check if CSV exists - if so, use pandas to merge properly
     csv_exists = os.path.exists(csv_path)
-    with open(csv_path, "a", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames)
-        if not csv_exists:
+    if csv_exists:
+        try:
+            import pandas as pd
+            # Read existing CSV (may have additional columns like stance, language, etc.)
+            existing_df = pd.read_csv(csv_path)
+            # Convert new results to DataFrame
+            new_df = pd.DataFrame([{k: r.get(k, "") for k in fieldnames} for r in results])
+            # Concatenate (pandas will handle column alignment)
+            combined_df = pd.concat([existing_df, new_df], ignore_index=True)
+            # Save back
+            combined_df.to_csv(csv_path, index=False)
+            print(f"Merged {len(results)} new rows with {len(existing_df)} existing rows in CSV: {csv_path}")
+        except Exception as e:
+            print(f"Warning: Could not merge with pandas ({e}), using append mode", file=sys.stderr)
+            # Fallback to simple append
+            with open(csv_path, "a", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=fieldnames)
+                for r in results:
+                    w.writerow({k: r.get(k, "") for k in fieldnames})
+            print(f"Appended {len(results)} rows to CSV: {csv_path}")
+    else:
+        # New file - just write it
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=fieldnames)
             w.writeheader()
-        for r in results:
-            w.writerow({k: r.get(k, "") for k in fieldnames})
-    print(f"Appended {len(results)} rows to CSV: {csv_path}")
+            for r in results:
+                w.writerow({k: r.get(k, "") for k in fieldnames})
+        print(f"Created new CSV with {len(results)} rows: {csv_path}")
 
     # Write JSONL (append mode)
     jsonl_path = "data/natur_reacties_full.jsonl"

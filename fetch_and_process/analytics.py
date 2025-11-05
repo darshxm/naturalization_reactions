@@ -41,6 +41,7 @@ class Stance(enum.Enum):
 class Language(enum.Enum):
     DUTCH = "Dutch"
     ENGLISH = "English"
+    BOTH = "Both"
     OTHER = "Other"
 
 class ImmigrantStatus(enum.Enum):
@@ -79,7 +80,7 @@ def build_prompt(items: List[Dict]) -> str:
         "Return a JSON array of objects with fields:\n"
         "- row_index: the same integer we provide\n"
         "- label: one of \"For\" or \"Against\" only\n"
-        "- language: one of \"Dutch\", \"English\", or \"Other\" (detect the language of the text)\n"
+        "- language: one of \"Dutch\", \"English\", \"Both\", or \"Other\" (detect the language of the text)\n"
         "- identifies_as_immigrant: one of \"Yes\", \"No\", or \"Unclear\" (does the author identify themselves as an immigrant/migrant?)\n\n"
         "Decision rules:\n"
         "- \"For\"  = the author supports the proposal.\n"
