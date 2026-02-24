@@ -124,7 +124,8 @@ export default function Home() {
           <a href="https://internetconsultatie.nl/naturalisatietermijn/b1" target="_blank" rel="noopener noreferrer">
             Internet Consultatie
           </a>
-          Source code of this project: 
+          {' | '}
+          Source code: 
           <a href="https://github.com/darshxm/naturalization_reactions.git" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
