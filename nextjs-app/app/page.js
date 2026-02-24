@@ -124,6 +124,10 @@ export default function Home() {
           <a href="https://internetconsultatie.nl/naturalisatietermijn/b1" target="_blank" rel="noopener noreferrer">
             Internet Consultatie
           </a>
+          Source code of this project: 
+          <a href="https://github.com/darshxm/naturalization_reactions.git" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
           {' | '}
           <a href="/privacy" style={{ color: '#fff', textDecoration: 'underline' }}>
             Privacy Policy
